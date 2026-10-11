@@ -45,7 +45,18 @@ h6,
     font-weight: 700;
 }
 
+/* Center the page/post title (theme only centres it on mobile) */
+.bold-title {
+    text-align: center;
+}
+
 .qr-code {
+    border-radius: 12px;
+}
+
+.latest-articles-image {
+    width: 100%;
+    max-width: 300px;
     border-radius: 12px;
 }
 

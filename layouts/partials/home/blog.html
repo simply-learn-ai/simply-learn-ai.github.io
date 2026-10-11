@@ -4,17 +4,24 @@
     <div class="container">
         {{ if .Site.Params.home.showLatest | default true }}
         <h2 class="title is-2 has-text-centered">{{ i18n "index_blog_latestPosts" . }}</h2>
-        {{ range first 1 .Pages.ByPublishDate.Reverse }}
-        <div class="summary">
-            <h3 class="title is-3 latest-post-title"><a href="{{ .Permalink }}">{{ .Title | markdownify }}</a></h3>
-            <div class="markdown">
-                {{ .Summary }}
-                {{ if .Truncated }}
-                <a href="{{ .Permalink }}">{{ i18n "index_blog_readMore" . }}</a>
+        <div class="columns is-vcentered is-variable is-6">
+            <div class="column is-one-third has-text-centered">
+                <img class="latest-articles-image" src="/img/latest-articles.jpg" alt="">
+            </div>
+            <div class="column">
+                {{ range first 1 .Pages.ByPublishDate.Reverse }}
+                <div class="summary">
+                    <h3 class="title is-3 latest-post-title"><a href="{{ .Permalink }}">{{ .Title | markdownify }}</a></h3>
+                    <div class="markdown">
+                        {{ .Summary }}
+                        {{ if .Truncated }}
+                        <a href="{{ .Permalink }}">{{ i18n "index_blog_readMore" . }}</a>
+                        {{ end }}
+                    </div>
+                </div>
                 {{ end }}
             </div>
         </div>
-        {{ end }}
         {{ end }}
     </div>
 </div>
