@@ -52,7 +52,7 @@ Existing project overrides and their intent:
 ## Styling
 
 - Custom CSS is `assets/css/custom.css`, enabled by `customCSS = ["css/custom.css"]` (`config.toml:17`) and linked via `layouts/partials/head/css.html:16-17`. Do not edit theme Sass for font or colour changes.
-- Current conventions there: Abril Fatface for headings, bold and `.bold-title` (`assets/css/custom.css:3-15`); blog body uses Nunito Sans via `.blog-content` (`assets/css/custom.css:17-38`).
+- Current conventions there: Abril Fatface for headings, bold and `.bold-title` (`assets/css/custom.css:3-15`); post `## ` (h2) section headings such as `## Introduction` use Playfair Display (weight 800) via `.blog-content h2`; blog body and other post headings use Nunito Sans.
 
 ## Housekeeping
 

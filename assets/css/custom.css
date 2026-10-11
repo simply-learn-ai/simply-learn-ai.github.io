@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Playfair+Display:wght@700;800;900&display=swap');
 
 b,
 strong,
@@ -18,7 +18,6 @@ h6,
 .blog-content b,
 .blog-content strong,
 .blog-content h1,
-.blog-content h2,
 .blog-content h3,
 .blog-content h4,
 .blog-content h5,
@@ -26,10 +25,14 @@ h6,
     font-family: 'Nunito Sans', sans-serif;
 }
 
+/* Post h2 section headings (e.g. "## Introduction") use a thicker serif */
+.blog-content h2 {
+    font-weight: 600;
+}
+
 .blog-content b,
 .blog-content strong,
 .blog-content h1,
-.blog-content h2,
 .blog-content h3,
 .blog-content h4,
 .blog-content h5,

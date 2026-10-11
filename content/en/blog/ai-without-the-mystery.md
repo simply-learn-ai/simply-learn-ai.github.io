@@ -67,13 +67,15 @@ An AI assistant is not created in one step. A useful way to picture its life is:
 - The data shapes what a model can learn. It may contain gaps, old information, mistakes or unfair patterns, so more data does not automatically mean better answers.
 - **Are we running out of clean data?** Broadly, yes, as a forecast. Researchers at Epoch AI estimate the useful stock of public human-written text at around 300 trillion tokens and project that language models could use it all up at some point between 2026 and 2032, or sooner if models are trained heavily on the same data. 
 - As clean text grows scarce, companies are already paying for it, for example through deals to use forum posts and news archives.
+- **References**
   - [Will we run out of data to train large language models? (Epoch AI, 2024)](https://epoch.ai/publications/will-we-run-out-of-data-limits-of-llm-scaling-based-on-human-generated-data)
   - [AI “gold rush” for training data could run out of human-written text (PBS NewsHour, 2024)](https://www.pbs.org/newshour/economy/ai-gold-rush-for-chatbot-training-data-could-run-out-of-human-written-text-as-early-as-2026)
 
 ### 2. Train the model
 - During **training**, the algorithm adjust a model’s internal numbers so it learns to produce similar results to the data it is trained on. A model, for example, practises predicting missing or next pieces of text across a very large number of examples.
 - But it takes a lot of computation power and specialised chips working together in data centres.
-- To get a feel of it currently we are on GPT 6 model but training of one of the earlier OpenAI’s GPT-3 used about **1,287 megawatt-hours (MWh)** of electricity or enough to power **119 homes in US for an entire year**. - References
+- To get a feel of it currently we are on GPT 6 model but training of one of the earlier OpenAI’s GPT-3 used about **1,287 megawatt-hours (MWh)** of electricity or enough to power **119 homes in US for an entire year**. 
+- **References**
   - [Research estimate for GPT-3](https://arxiv.org/abs/2104.10350)
   - [US household electricity figures](https://www.eia.gov/tools/faqs/faq.php?id=97&t=4)
 
@@ -100,7 +102,7 @@ An AI assistant is not created in one step. A useful way to picture its life is:
 
 <img src="/img/inference.gif" alt="Inference: a chatbot generating an answer token by token" width="700">
 
-### Can I trust what AI tells me?
+## How much can I trust what AI tells me?
 
 - **Where its knowledge comes from.** An AI assistant is trained on an enormous collection of text and code gathered from the open internet, books, news articles, social media and public code repositories. It is not fed one trusted encyclopedia, so its sources are a mix of accurate, outdated and simply wrong material, and nobody checks every sentence before training.
 - **A simple picture in your mind.** Imagine a keen apprentice who has learnt from millions of books, code, social media feeds, news and conversations.
@@ -119,16 +121,24 @@ An AI assistant is not created in one step. A useful way to picture its life is:
   - Check the date. Rules, prices, opening hours and public figures can change.
   - When it involves math - ask for formula used, Redo any arithmetic with a calculator. 
   - If the answer affects your health, money, safety or rights, confirm it with a real person before you act.
-- References:
+- **References:**
   - The United States National Institute of Standards and Technology notes that generative systems can confidently generate false material and even false citations. [NIST’s Generative AI Profile](https://tsapps.nist.gov/publication/get_pdf.cfm?pub_id=958388) explains why this is a known risk.
   - Do not argue with it as though it is hiding the truth. Ask for sources, then check the sources yourself.
 
+![alt text](/img/tools.png)
+
 ## How can you ask a right prompt
+
+### Improve a weak prompt
+
+- Weak: “Help me make a shopping list.”
+- Better: “Help me make a shopping list for three easy vegetarian dinners for one person, avoid nuts and keep the ingredients inexpensive.”
+- Identifying the good parts of the prompt: you supplied the **audience**, **limits** and **context**. Note if you do not provide the full context it will fill it with the information it was trained on. so Summary set your -audience, purpose and boundaries.
 
 ### Five questions that make AI answers better
 
 - **What is the job?** “Write”, “summarise”, “compare”, “make a checklist” or “help me practise” gives it a clear role.
-- **Who is it for?** “Use plain Australian English for a 75-year-old beginner.”
+- **Who is it for?** “Use plain Australian English for a AI beginner.”
 - **What limits matter?** “Keep it under 150 words” or “give only three options.”
 - **What should it show?** “State your assumptions and link to official sources.”
 - **What must it avoid?** “Do not invent facts. If you are unsure, say so.”
@@ -145,19 +155,13 @@ An AI assistant is not created in one step. A useful way to picture its life is:
 - Add a limit so it does not run away: “Ask me up to five questions, one at a time, and wait for my answers before you reply.”
 - This works well whenever you are not sure which facts matter, such as planning a trip, choosing a product or preparing for an appointment.
 
-### Improve a weak prompt
-
-- Weak: “Help me make a shopping list.”
-- Better: “Help me make a shopping list for three easy vegetarian dinners for one person, avoid nuts and keep the ingredients inexpensive.”
-- Identifying the good parts of the prompt: you supplied the **audience**, **limits** and **context**. Note if you do not provide the full context it will fill it with the information it was trained on. so Summary set your -audience, purpose and boundaries.
-
-## What information can you share and not share in your prompts
+## Safely using AI
 
 - Before pasting anything into an AI service, imagine it printed on a postcard. Would you be comfortable if a stranger read it?
 
 <figure>
   <img src="/img/lorentz-postcard-1911.jpg" alt="A handwritten 1911 postcard by the physicist Hendrik Lorentz" width="460">
-  <figcaption>Physicist Hendrik Lorentz wrote this postcard in February 1911 to J.F. Hulk, a curator at the Teylers Museum in Haarlem, to arrange a planned visit by Albert Einstein and his wife. Public domain image, via Wikimedia Commons.</figcaption>
+  <figcaption>Physicist Hendrik Lorentz wrote this postcard in February 1911 to J.F. Hulk, a curator at the Teylers Museum in Haarlem, to arrange a planned visit by Albert Einstein and his wife. </figcaption>
 </figure>
 
 - Share **general and made-up details** wherever they will do the job. For example: “Write a kind message to a family member about helping an older neighbour who has memory difficulties.”
@@ -167,7 +171,8 @@ An AI assistant is not created in one step. A useful way to picture its life is:
 - Do not upload a photograph of a passport, Medicare card, bank statement, tax document, medical report or legal document to a public AI tool.
 - Treat health information, finances, location history, family photos, voice recordings and private messages as especially sensitive.
 - Ask before entering information about another person. Their privacy belongs to them too.
-- The Office of the Australian Information Commissioner explains that personal information can include names, contact details, identifiable images and information that can reasonably be linked back to a person. [Read the OAIC guidance on AI and privacy](https://www.oaic.gov.au/privacy/privacy-guidance-for-organisations-and-government-agencies/guidance-on-privacy-and-developing-and-training-generative-ai-models).
+- **Reference:**
+  - The Office of the Australian Information Commissioner explains that personal information can include names, contact details, identifiable images and information that can reasonably be linked back to a person. [Read the OAIC guidance on AI and privacy](https://www.oaic.gov.au/privacy/privacy-guidance-for-organisations-and-government-agencies/guidance-on-privacy-and-developing-and-training-generative-ai-models).
 
 ### A safer way to ask
 
@@ -177,26 +182,33 @@ An AI assistant is not created in one step. A useful way to picture its life is:
 - “Create a simple household budget template with rent, food, transport and medicines.”
 - Then put your real details into your own private document, not the chatbot.
 
+### Use mock data, then swap in the real details
+
+- Build the shape of what you need first with pretend details. Use placeholder names such as “John Doe”, a fake address such as “123 Street” and rounded numbers such as $100.
+- Ask the AI to draft the letter, table, plan or script using those stand-ins. You get the structure, tone and wording without sharing anything real.
+- Replace every placeholder with the true details yourself, in your own private document, not by pasting them back into the chatbot.
+- Keep a short list of your placeholders, such as `[NAME]`, `[ADDRESS]` and `[AMOUNT]`, so you can find and replace them later.
+- For example: to draft a complaint about a bill, ask for “a polite letter to a utility company about an unexpected $100 charge on account 12345 for a service I did not request”, then swap in your real account number, amount and date in your own file.
 
 ## Ways of saving money.
 
 - Use the free version first. Free chatbots are good enough for everyday questions, and you only need to pay when you have a specific job the free tier cannot do, such as very long documents, heavy image work or a tool you use every day.
 - Know how you are billed. A monthly subscription costs the same however much you type, but usage-based apps and developer tools charge by the word, so a long conversation is a bigger bill.
-- Drop the padding. Words like “please” and “thank you” do not make the answer better, and on usage-based tools every extra word is a cost.
+- **Words like “please” and “thank you” do not make the answer better**, and on usage-based tools every extra word is a cost.
 - Ask for short answers. “Answer in three bullet points” or “keep it under 100 words” costs less and is easier to read.
-- Remember that output costs more than input. Most paid services charge more for what the AI writes than for what you send, so a request that invites a huge answer is the expensive part.
-- Start a fresh chat for a new topic. A long, rambling thread is re-sent with every message, which uses up your allowance and can confuse the model.
-- Paste only what is needed. Send the paragraph you want answered, not the whole document, unless the task really is the whole document.
-- Use the smallest model that can do the job. A quick rewrite or a simple list does not need the most powerful and most expensive model.
+- **Remember that output costs more than input.** Most paid services charge more for what the AI writes than for what you send, so a request that invites a huge answer is the expensive part.
+- **Start a fresh chat for a new topic.** A long thread is re-sent with every message, which uses up your allowance and can confuse the model.
+- **Paste only what is needed.** Send the paragraph you want answered, not the whole document, unless the task really is the whole document.
+- **Use the smallest model that can do the job.** A quick rewrite or a simple list does not need the most powerful and most expensive model.
 - Ask for the change, not the whole thing. “Show me just the corrected paragraph” is cheaper than regenerating the entire document.
 - Turn off extras you are not using, such as web search or image tools, if your plan charges for them.
 - Take a free trial only when you need a short burst of heavy use, and cancel before it renews. Students, teachers and some community groups can get the same tools at a lower price.
 - Watch tools that charge by credits or by the minute. Image, video and audio generation often cost more per use, so set the size, length and number you need instead of asking for many versions.
 - Keep an eye on your usage. Set a spending limit on any account that bills per use, and check the usage page each month. Cancel subscriptions you have stopped using.
 
-## 3. The traffic-light rule: where AI fits
+## Right and Wrong Usecases:
 
-### Green light: useful, low-stakes jobs
+### 🟢 Useful, low-stakes jobs
 
 - Brainstorming meal ideas from ingredients you already have.
 - Turning rough notes into a polite email, birthday message or club newsletter.
@@ -207,7 +219,7 @@ An AI assistant is not created in one step. A useful way to picture its life is:
 - Summarising a public article that you paste in, while checking the original before passing it on.
 - Generating a quiz for a family gathering or ideas for a hobby project.
 
-### Amber light: useful only with checking
+### 🟡 Useful only with checking
 
 - Travel plans, product comparisons, recipes involving allergies, local services and historical facts.
 - Drafting a complaint letter: let AI organise the language, but replace every placeholder and check every claim.
@@ -215,16 +227,16 @@ An AI assistant is not created in one step. A useful way to picture its life is:
 - Working out a budget: use it to suggest categories or questions, then check calculations with a calculator and the original bills.
 - Understanding a medical term: use it to prepare questions for a qualified health professional, not to diagnose yourself.
 
-### Red light: do not hand the decision to AI
+### 🔴 Do not hand the decision to AI
 
 - Emergencies, symptoms that need urgent care, changing or stopping medicine and interpreting test results.
 - Deciding whether to invest, borrow money, buy cryptocurrency or make a major financial move.
 - Legal deadlines, signing contracts, wills, immigration matters or tax lodgements.
 - Sharing a private family dispute, someone else’s health details or confidential work information.
 - Sending money, passwords or identification because a message, image or voice recording seems persuasive.
-- **Aha moment:** AI can help you prepare a question for an expert. It is not the expert who accepts responsibility for the answer.
+- AI can help you prepare a question for an expert. It is not the expert who accepts responsibility for the answer.
 
-## 4. The “pause, prove, proceed” check
+## AI Scams
 
 - **Pause.** Is the answer asking you to act quickly, spend money, share data or make a health or legal decision? If so, slow down.
 - **Prove.** Find the original source. For Australian government information, look for an official `gov.au` website. For a medicine, check the pharmacist, doctor or official medicine information. For a bank, use the number printed on your card or statement.
@@ -239,6 +251,23 @@ An AI assistant is not created in one step. A useful way to picture its life is:
 - If the answer uses numbers, redo the arithmetic with a calculator. A chatbot can make basic calculation errors.
 - If you cannot verify it, say “I do not know yet” and ask a person or organisation that does.
 
+### Tools that can help spot AI-made content
+
+- No tool is perfect. Detectors miss the newest generators and can wrongly flag real photos, so treat every result as one clue, not proof.
+- **Images and video**
+  - [Hive AI Detector](https://hivemoderation.com) and [AI or Not](https://www.aiornot.com) give a quick “AI or not” verdict.
+  - [Illuminarty](https://illuminarty.ai) also shows which parts of the picture led to its answer.
+  - [Sightengine](https://sightengine.com) is built for developers and bulk checks.
+  - [Content Credentials Verify](https://contentcredentials.org/verify) reads a built-in provenance record when a picture carries one.
+  - [Google SynthID](https://deepmind.google/technologies/synthid/) finds content made by some Google models.
+- **Text**
+  - [GPTZero](https://gptzero.me), [Originality.ai](https://originality.ai), [Winston AI](https://gowinston.ai) and [Pangram](https://pangram.com) estimate whether writing was made by AI. Treat these as weak evidence, because they are often wrong on short or edited text.
+- **Voice and deepfake video**
+  - [Reality Defender](https://www.realitydefender.com) checks audio, images and video for synthetic media.
+- **Find the original**
+  - Search the picture with [Google Lens](https://lens.google) or [TinEye](https://tineye.com). Finding an earlier, unedited copy is often more useful than any detector.
+- Fast habits: look closely at hands, small text, jewellery, reflections and shadows, then check the original source before you believe or forward anything.
+
 ### A smart example: the miracle rebate
 
 - A chatbot says: “You can claim a new $2,000 energy rebate this month.” It sounds specific and helpful.
@@ -246,12 +275,12 @@ An AI assistant is not created in one step. A useful way to picture its life is:
 - Search the relevant state or federal government website yourself. Check the programme name, eligibility, closing date and application method.
 - If the offer is genuine, an official page will explain it. If it is not, you have saved yourself money and worry.
 
-## 5. AI scams: the new voice is not proof
+### the new voice is not proof
 
 - Scammers use the same tools we do, including tools that can imitate a voice, create a picture or write an urgent message with excellent grammar.
 - A frightening call may say: “Grandma, I have had an accident. Please do not tell Mum. Send money now.” It may sound exactly like a loved one.
 - The United States Federal Trade Commission warns that a short clip posted online can be enough for a criminal to attempt a voice clone. Its advice is simple: do not trust the voice alone. [Read the FTC warning](https://consumer.ftc.gov/comment/180311).
-- Hang up. Call your relative using a number you already know, or contact another trusted family member. Do not use the number supplied by the caller.
+- Hang up. Call your relative using an alternate number. Do not use the number supplied by the caller or just the regular number alone.
 - Agree on a family **safe word** or a simple question only your family can answer. It should not be a fact easily found on social media.
 - Never let urgency make the decision for you. “Act now”, “keep this secret” and “pay by gift card, cryptocurrency or instant transfer” are danger signs.
 - A real organisation will let you verify independently. A scammer tries to keep you in their message, call or link.
@@ -265,27 +294,6 @@ An AI assistant is not created in one step. A useful way to picture its life is:
 - A request for a code that was sent to your phone. That code is often the key to your account.
 - When in doubt, stop and talk to someone. A second pair of eyes is a powerful security tool.
 
-## 6. Practical device safety, without the jargon
-
-- Use a different, long password for each important account. A password manager can remember them for you.
-- Turn on two-factor authentication where available. It means a password alone is not enough to enter your account.
-- Keep your phone, tablet, browser and apps updated. Updates often fix security problems, not just add features.
-- Download AI apps only from the official Apple App Store, Google Play store or the provider’s real website. Check the developer name and reviews, but do not rely on reviews alone.
-- Read the privacy settings before using a new service. Look for options about chat history, training and data controls, then choose what you are comfortable with.
-- Log out of important accounts on a shared computer. Lock your own device with a PIN, passcode or biometric lock.
-- Be careful with browser extensions that promise “free AI”. An extension may be able to read what you see or type in the browser.
-- Australia’s cyber security guidance emphasises that security supports the safety, privacy and reliability of AI systems. [Cyber.gov.au’s AI security guidance](https://www.cyber.gov.au/business-government/secure-design/artificial-intelligence/guidelines-for-secure-ai-system-development) is a useful reminder that convenience and safety should travel together.
-
-## 7. Keep your human skills in the picture
-
-- AI is strong at speed, first drafts and finding patterns in a large amount of text.
-- People are strong at values, relationships, context, compassion and deciding what is worth doing.
-- Ask yourself: “What would a sensible friend ask before believing this?”
-- Use AI to create options, not to choose your values.
-- Do not be embarrassed to ask the same question in a simpler way. “Explain that without jargon” is an excellent instruction.
-- Do not be embarrassed to walk away. You do not owe a chatbot, an advert or a caller an immediate reply.
-- **Aha moment:** the most valuable skill in the age of AI may be the old-fashioned one: knowing when to pause and ask a good question.
-
 ## 8. Pictures, videos and “too good to be true” evidence
 
 - A photograph used to feel like strong evidence. Now it may be real, edited, generated or taken from somewhere else and given a false caption.
@@ -297,78 +305,8 @@ An AI assistant is not created in one step. A useful way to picture its life is:
   - Does the account have a long, credible history or was it created recently?
   - Is the picture being used to make you angry, frightened or eager to invest before you can think?
 - A video of a politician, celebrity or doctor may be a deepfake: a convincing artificial imitation. Treat an extraordinary claim as unproven until it appears through that person’s official channels or reliable reporting.
-- **Aha moment:** “I can see it with my own eyes” is no longer the end of the enquiry. It is the beginning of it.
+- “I can see it with my own eyes” is no longer the end of the enquiry. It is the beginning of it.
 - AI-generated pictures can still be delightful. Use them for an invitation, a story illustration or an idea for a garden. Just label them honestly if another person might mistake them for a real event.
-
-### Example: the celebrity investment advertisement
-
-- You see a video of a famous television presenter recommending a new investment opportunity.
-- The video looks polished. The caption says places are limited. A link asks for your phone number.
-- Do not use the link. Search for the presenter’s verified account and their official website. Search the investment name plus the word “scam”.
-- Discuss any investment with a licensed financial professional you have contacted independently. A familiar face in a video is marketing, not proof.
-
-## 9. How to use AI alongside people, not instead of them
-
-- Use a chatbot before an appointment to organise your thoughts. Take a printed list of questions to the real person.
-- Use it after an appointment to turn **your own non-sensitive notes** into plain-language reminders. Do not treat the result as a clinical record.
-- Ask a librarian to show you good research sources. Libraries are one of the best places to practise digital confidence without pressure.
-- Compare an AI suggestion with the experience of a local group, a trusted friend or a professional. Different perspectives uncover blind spots.
-- If English is not your first language, AI can help you prepare a short message. For a legal, medical or financial document, use a qualified interpreter or adviser for the final meaning.
-- If you are helping a friend with technology, do the verification together. The goal is not to take over their device. It is to leave them with a skill they can use next time.
-
-### Helpful phrases for asking a real person
-
-- “An AI tool told me this. Could you help me check whether it applies to my situation?”
-- “I do not understand this term. Could you explain it without jargon?”
-- “Before I click or pay, what is the official way to verify this?”
-- “What information should I never enter into this service?”
-- These questions are not silly. They are exactly the questions careful people ask.
-
-## 10. Common mistakes and easy replacements
-
-- **Mistake:** asking, “Can I trust AI?”
-  - **Better question:** “Can I trust this particular answer for this particular decision after checking it?”
-- **Mistake:** pasting a whole letter, report or email to get a summary.
-  - **Better approach:** remove names and numbers, summarise only the general parts or ask the sender for a plain-language explanation.
-- **Mistake:** treating a chatbot’s friendly tone as a relationship.
-  - **Better approach:** enjoy the conversation if you wish, but seek human support for loneliness, grief, danger or a major personal choice.
-- **Mistake:** using the first answer as the final answer.
-  - **Better approach:** ask it to show assumptions, give alternatives and state what it cannot know.
-- **Mistake:** clicking the first link in an AI answer.
-  - **Better approach:** type the organisation’s address yourself or use a bookmark you already trust.
-- **Mistake:** feeling embarrassed after nearly falling for a scam.
-  - **Better approach:** tell someone promptly. Scams are designed to rush and manipulate capable people. Fast reporting can protect you and others.
-
-## 11. A short group activity for a talk or community class
-
-- Read this request aloud: “Write a warm invitation to a neighbourhood afternoon tea.”
-- Ask the group what could safely be included: the public venue, date, time and a request to RSVP.
-- Ask what should not be included: anyone’s private phone number, medical information or a list of people who live alone.
-- Generate a draft, then improve it together: make it friendlier, shorter and clearer.
-- Next, read this request: “My bank has texted a link. Is it real?”
-- Ask the group what the AI can do safely: list scam warning signs and help write a script for calling the bank.
-- Ask what it must not do: decide the text is genuine, open the link, access the bank account or tell someone to share a code.
-- Finish with the sentence everyone can remember: **“I verify through the official channel I find myself.”**
-
-## 12. A gentle 10-minute practice session
-
-- Choose a low-risk task. For example: “Help me make a shopping list for three easy vegetarian dinners.”
-- Read the answer and improve the request: “Make it suitable for one person. Avoid nuts. Keep the ingredients inexpensive.”
-- Notice what happened: the result improved because **you** supplied judgement and context.
-- Ask it for a fact: “What is the opening time of my nearest library?”
-- Now practise checking: find the library’s official website or call it. Notice that the chatbot’s answer is only a starting point.
-- Finish by writing one rule on paper: “I will not enter passwords, codes, bank details or private documents into a chatbot.” Put it near your device.
-
-## 13. A pocket checklist for every AI interaction
-
-- What am I trying to achieve?
-- Is this a low-stakes task or a decision that could affect health, money, safety or rights?
-- Have I removed private information?
-- Does the answer ask me to hurry, pay or keep a secret?
-- Can I verify the important claim through an official, independent source?
-- Would I be comfortable explaining this decision to a trusted friend?
-- If the answer is “no” or “I am not sure”, pause and get human help.
-
 
 ## **Popular AI subscriptions compared, including free plans (prices in US dollars per month, checked October 2026)**
 
