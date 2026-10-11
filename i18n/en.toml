@@ -7,7 +7,7 @@
 [index_blog_latestPosts]
     other = "Latest Articles"
 [index_blog_allPosts]
-    other = "All Posts"
+    other = "All Articles"
 [index_blog_readMore]
     other = "Read more"
 [index_currentTime]

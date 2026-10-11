@@ -1,5 +1,5 @@
 ---
-title: "Learn"
+title: "Learning Corner"
 weight: 20
 ---
 

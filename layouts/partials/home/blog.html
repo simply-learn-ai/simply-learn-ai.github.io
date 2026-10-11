@@ -4,11 +4,15 @@
     <div class="container">
         {{ if .Site.Params.home.showLatest | default true }}
         <h2 class="title is-2 has-text-centered">{{ i18n "index_blog_latestPosts" . }}</h2>
-        <div class="columns is-vcentered is-variable is-6">
+        <div class="columns is-variable is-6">
             <div class="column is-one-third has-text-centered">
-                <img class="latest-articles-image" src="/img/latest-articles.jpg" alt="">
+                <img class="latest-articles-image" src="/img/croissant.jpeg" alt="">
             </div>
             <div class="column">
+                <div class="markdown latest-articles-intro">
+                    <p><strong>Learn about AI with confidence.</strong> These practical guides explain how AI works, where it can help and how to use it safely.</p>
+                    <p>Find clear advice on checking answers, protecting your privacy and spotting scams.</p>
+                </div>
                 {{ range first 1 .Pages.ByPublishDate.Reverse }}
                 <div class="summary">
                     <h3 class="title is-3 latest-post-title"><a href="{{ .Permalink }}">{{ .Title | markdownify }}</a></h3>
