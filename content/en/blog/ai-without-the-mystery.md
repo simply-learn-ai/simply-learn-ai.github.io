@@ -57,11 +57,20 @@ flowchart LR
 
 An AI assistant is not created in one step. A useful way to picture its life is: prepare examples, train a model to find patterns, tune how it responds, then run it each time someone asks a question.
 
-#### 1. Gather and prepare data
+### 1. Gather and prepare data
 - The responsible people collect data or create examples suited to the task, such as text or labelled pictures for an image classifier. They filter and organise this material so it can be processed by computers.
+- Common sources include:
+  - web pages gathered by large crawls such as Common Crawl 
+  - books and news articles (often licensed from publishers)
+  - public code from sites such as GitHub
+  - reference works such as Wikipedia and conversations collected from people using the tool.
 - The data shapes what a model can learn. It may contain gaps, old information, mistakes or unfair patterns, so more data does not automatically mean better answers.
+- **Are we running out of clean data?** Broadly, yes, as a forecast. Researchers at Epoch AI estimate the useful stock of public human-written text at around 300 trillion tokens and project that language models could use it all up at some point between 2026 and 2032, or sooner if models are trained heavily on the same data. 
+- As clean text grows scarce, companies are already paying for it, for example through deals to use forum posts and news archives.
+  - [Will we run out of data to train large language models? (Epoch AI, 2024)](https://epoch.ai/publications/will-we-run-out-of-data-limits-of-llm-scaling-based-on-human-generated-data)
+  - [AI “gold rush” for training data could run out of human-written text (PBS NewsHour, 2024)](https://www.pbs.org/newshour/economy/ai-gold-rush-for-chatbot-training-data-could-run-out-of-human-written-text-as-early-as-2026)
 
-#### 2. Train the model
+### 2. Train the model
 - During **training**, the algorithm adjust a model’s internal numbers so it learns to produce similar results to the data it is trained on. A model, for example, practises predicting missing or next pieces of text across a very large number of examples.
 - But it takes a lot of computation power and specialised chips working together in data centres.
 - To get a feel of it currently we are on GPT 6 model but training of one of the earlier OpenAI’s GPT-3 used about **1,287 megawatt-hours (MWh)** of electricity or enough to power **119 homes in US for an entire year**. - References
@@ -72,17 +81,22 @@ An AI assistant is not created in one step. A useful way to picture its life is:
 - A trained model may then be **fine-tuned** with more focused examples based on the usecase it is going to be used for - such as question-and-answer pairs. 
 - This is done with model learning based on human feedback on the output.
 - This stage shapes how the model responds. It does not guarantee that every answer is correct, fair or safe.
+- **Examples of what tuning changes:**
+  - **Refusals and safety.** Tuning teaches a model to decline harmful requests, such as instructions for making a weapon or a virus. The same tuning can overshoot: assistants sometimes refuse harmless requests, such as a nurse asking a genuine medical question.
+  - **Tone, personality and house style.** Providers tune the assistant’s voice, so one tool sounds warm and chatty while another is blunt and brief. A support bot can be tuned on a company’s own question-and-answer pairs so it replies using the company’s wording and rules.
+  - **Learning from ratings.** In “reinforcement learning from human feedback”, people compare pairs of answers and pick the better one. Over time the model leans toward the style people reward, which is part of why today’s answers are more polite and better formatted than the earliest ones.
+  - **The flattery problem.** Training on human approval has a side effect: models learn to agree with you. [Anthropic’s 2023 research](https://www.anthropic.com/research/towards-understanding-sycophancy-in-language-models) found that when a person states a mistaken belief, both people and the scoring models often prefer a confident answer that agrees with them over the correct one. This is why an assistant may open with “You’re absolutely right!” even when you are wrong.
+  - **Written rules.** Some providers tune with a written set of principles, such as “be helpful and avoid harm”, then have the model critique and rewrite its own answers against those rules.
 
 ### 4. Test before release
 - Developers evaluate the model with tasks and safety checks. They look for things such as accuracy, harmful responses, privacy risks and how it behaves when a question is unclear.
-- No test can cover every possible question. Testing can find problems and reduce risks, but it cannot prove a model will never make a mistake.
 
 ### 5. Run it: inference
 - **Inference** is the name for using a trained model. When you send a prompt, the model processes it and generates an answer. For a chatbot, it predicts a response in small pieces called tokens.
 
 ### 6. Monitor and improve
 - After release, providers monitor performance, fix problems and may update the software, its instructions or the model itself. A major new model can require another training process.
-- A lot of models use the information we give and our usage pattern to further train the model.
+- A lot of models use the information we give and our usage pattern to further train the model. We will later go through what information is safe and not safe to share with an AI Chatbot.
 
 <img src="/img/inference.gif" alt="Inference: a chatbot generating an answer token by token" width="700">
 
@@ -90,24 +104,24 @@ An AI assistant is not created in one step. A useful way to picture its life is:
 
 - **Where its knowledge comes from.** An AI assistant is trained on an enormous collection of text and code gathered from the open internet, books, news articles, social media and public code repositories. It is not fed one trusted encyclopedia, so its sources are a mix of accurate, outdated and simply wrong material, and nobody checks every sentence before training.
 - **A simple picture in your mind.** Imagine a keen apprentice who has learnt from millions of books, code, social media feeds, news and conversations.
-  - Ask for a first draft of a speech: excellent task.
-  - Ask whether your chest pain is dangerous: wrong task. The apprentice cannot examine you, take responsibility or call an ambulance.
-  - Ask for the opening hours of a local shop: it may know, but the shop’s own website or a phone call is the better source.
-- **confident and wrong.** Because the AI predicts the most likely next words rather than looking up a fact, it can produce an answer that reads perfectly but is untrue. This is called a “confabulation”**onfabulation** or **hallucination**. It can invent names, dates, quotes, statistics, laws, references and even whole web pages, and it presents them with total confidence.
+  - **Ask for a first draft of a speech:** excellent task.
+  -** Ask whether your chest pain is dangerous:** wrong task. The apprentice cannot examine you, take responsibility or call an ambulance.
+  - **Ask for the opening hours of a local shop:** most of the mordern model uses tools (e.g. a web browser) to search through a shop’s own website.
+- it could answer your question in a very convincingly confident answer but wrong or irrelevant to your question. This is called a “confabulation”, or **hallucination**. It can invent names, dates, quotes, statistics, laws, references and even whole web pages, and it presents them with total confidence. 
+- With the earlier models if you ask it questions like "what is todays date" it would answer a date in the past probably when it was trained on. Now-a-days models are trained to use the right tools it has access to, to do appropriate operation like - fetch the date or do calculation etc.
 - **An example with real consequences.** In 2023 a New York lawyer asked ChatGPT to find earlier cases that supported his argument. It produced six cases that did not exist, complete with convincing names, judges and quotes. The lawyer filed them in court without checking, and the judge later fined the lawyers and their firm $5,000 for relying on fake citations.
 - **A small error, an enormous cost.** In February 2023 Google showed off its chatbot Bard with an advert that claimed the James Webb Space Telescope had taken the first picture of a planet outside our solar system. That was wrong: the first such image came in 2004 from the European Southern Observatory’s Very Large Telescope. Astronomers spotted the mistake within hours, and Alphabet’s share price fell sharply that day, at one point wiping about US$100 billion from the company’s value.
-- **How to check before you trust.** Treat every answer as a first draft, not a fact.
+- **How to check before you trust.** 
+  - Treat every answer as a first draft, not a fact.
   - Ask: “What are your sources? Give direct links, not just names.” Then open each link and confirm it exists and supports the claim.
   - Search the key claim in your own words and compare at least two reliable sources.
   - Prefer the original source: a government department, hospital, bank, manufacturer or recognised professional body.
   - Check the date. Rules, prices, opening hours and public figures can change.
-  - Redo any arithmetic with a calculator.
+  - When it involves math - ask for formula used, Redo any arithmetic with a calculator. 
   - If the answer affects your health, money, safety or rights, confirm it with a real person before you act.
-
-- AI can produce a “confabulation”, often called a hallucination: a false detail, source, event or explanation stated as if it were true.
-- It may invent a book title, mix up two people with similar names or give a citation that looks real but does not exist.
-- The United States National Institute of Standards and Technology notes that generative systems can confidently generate false material and even false citations. [NIST’s Generative AI Profile](https://tsapps.nist.gov/publication/get_pdf.cfm?pub_id=958388) explains why this is a known risk.
-- Do not argue with it as though it is hiding the truth. Ask for sources, then check the sources yourself.
+- References:
+  - The United States National Institute of Standards and Technology notes that generative systems can confidently generate false material and even false citations. [NIST’s Generative AI Profile](https://tsapps.nist.gov/publication/get_pdf.cfm?pub_id=958388) explains why this is a known risk.
+  - Do not argue with it as though it is hiding the truth. Ask for sources, then check the sources yourself.
 
 ## How can you ask a right prompt
 
