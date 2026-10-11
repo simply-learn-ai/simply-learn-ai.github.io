@@ -1,9 +1,9 @@
 +++
 date = '2026-09-17T11:15:30+10:00'
 draft = false
-title = 'AI Without the Mystery'
+title = 'AI Without the Mystery - Dot Points'
 tags = ['Artificial Intelligence', 'Digital Safety', 'Privacy', 'Soft Skills']
-summary = "A practical introduction to using AI wisely."
+summary = "A plain-language guide to how AI works, where it can help and how to check its answers, protect your privacy and use it safely."
 +++
 
 ## Introduction:

@@ -1,5 +1,5 @@
 ---
-title: "Blog"
+title: "Learn"
 weight: 20
 ---
 
