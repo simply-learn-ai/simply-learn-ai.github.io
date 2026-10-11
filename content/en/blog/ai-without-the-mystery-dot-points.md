@@ -107,7 +107,7 @@ An AI assistant is not created in one step. A useful way to picture its life is:
 - **Where its knowledge comes from.** An AI assistant is trained on an enormous collection of text and code gathered from the open internet, books, news articles, social media and public code repositories. It is not fed one trusted encyclopedia, so its sources are a mix of accurate, outdated and simply wrong material, and nobody checks every sentence before training.
 - **A simple picture in your mind.** Imagine a keen apprentice who has learnt from millions of books, code, social media feeds, news and conversations.
   - **Ask for a first draft of a speech:** excellent task.
-  -**Ask whether your chest pain is dangerous:** wrong task. The apprentice cannot examine you, take responsibility or call an ambulance.
+  - **Ask whether your chest pain is dangerous:** wrong task. The apprentice cannot examine you, take responsibility or call an ambulance.
   - **Ask for the opening hours of a local shop:** most of the mordern model uses tools (e.g. a web browser) to search through a shop’s own website.
 - it could answer your question in a very convincingly confident answer but wrong or irrelevant to your question. This is called a “confabulation”, or **hallucination**. It can invent names, dates, quotes, statistics, laws, references and even whole web pages, and it presents them with total confidence. 
 - With the earlier models if you ask it questions like "what is todays date" it would answer a date in the past probably when it was trained on. Now-a-days models are trained to use the right tools it has access to, to do appropriate operation like - fetch the date or do calculation etc.
