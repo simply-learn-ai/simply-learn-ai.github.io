@@ -63,3 +63,4 @@ Existing project overrides and their intent:
 ## Writing
 
 - Do not use Oxford commas in prose.
+- Keep the two versions of the AI article in sync: `content/en/blog/ai-without-the-mystery-dot-points.md` is the bullet-point version and `content/en/blog/ai-without-the-mystery-full-article.md` is the prose version. Whenever the dot-point version changes, update the full-article version to match, keeping its prose style.

@@ -50,14 +50,7 @@ title                            = "Simply Learn AI"
         lang = "en"
 
     # Social icons appear in introduction and contact section.
-    [[params.social]]
-        url   = "https://github.com/aeo-app"
-        icon  = "github" # icon name without the 'fa-'
-        icon_pack = "fab"
-    [[params.social]]
-        url = "mailto:hello@example.com"
-        icon = "paper-plane"
-        icon_pack = "fas"
+    # (GitHub and email icons removed.)
 
 # We only use tag as a taxonomies
 # You can add more by yourself
@@ -90,5 +83,5 @@ title                            = "Simply Learn AI"
         weight           = 0
         title            = "Simply Learn AI"
         [languages.en.params]
-            description  = "A practical, safe and surprising introduction to using AI wisely."
+            description  = "A practical and safe introduction to using AI wisely."
             # footerText   = ""                      # Text to override default footer text (markdown allowed)

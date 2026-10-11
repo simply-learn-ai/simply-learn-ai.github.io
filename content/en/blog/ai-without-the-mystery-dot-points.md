@@ -275,7 +275,7 @@ An AI assistant is not created in one step. A useful way to picture its life is:
 - Search the relevant state or federal government website yourself. Check the programme name, eligibility, closing date and application method.
 - If the offer is genuine, an official page will explain it. If it is not, you have saved yourself money and worry.
 
-### the new voice is not proof
+### The new voice is not proof
 
 - Scammers use the same tools we do, including tools that can imitate a voice, create a picture or write an urgent message with excellent grammar.
 - A frightening call may say: “Grandma, I have had an accident. Please do not tell Mum. Send money now.” It may sound exactly like a loved one.

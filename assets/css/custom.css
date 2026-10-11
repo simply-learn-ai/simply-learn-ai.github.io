@@ -40,9 +40,15 @@ h6,
     font-weight: 700;
 }
 
+/* Bold the top navigation links (About, Learn, Contact) */
+.navbar-item {
+    font-weight: 700;
+}
+
 .qr-code {
     border-radius: 12px;
 }
+
 
 h1 a,
 h2 a,
