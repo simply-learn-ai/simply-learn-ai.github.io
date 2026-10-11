@@ -294,7 +294,7 @@ An AI assistant is not created in one step. A useful way to picture its life is:
 - A request for a code that was sent to your phone. That code is often the key to your account.
 - When in doubt, stop and talk to someone. A second pair of eyes is a powerful security tool.
 
-## 8. Pictures, videos and “too good to be true” evidence
+### Pictures, videos and “too good to be true” evidence
 
 - A photograph used to feel like strong evidence. Now it may be real, edited, generated or taken from somewhere else and given a false caption.
 - Do not try to become a detective by staring at every eyelash or shadow. Image quality is not a dependable test on its own.
