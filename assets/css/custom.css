@@ -47,9 +47,14 @@ h6,
 }
 
 .top-finger {
-    font-size: 1.75rem;
+    display: inline-flex;
     line-height: 1;
     text-decoration: none;
+}
+
+.top-finger img {
+    width: 3.5rem;
+    height: 3.5rem;
 }
 
 .blog-content b,
