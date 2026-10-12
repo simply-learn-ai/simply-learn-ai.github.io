@@ -30,6 +30,28 @@ h6,
     font-weight: 600;
 }
 
+.blog-content .voice-teal {
+    color: #0f766e;
+}
+
+.blog-content .voice-maroon {
+    color: #800000;
+}
+
+.blog-content li:has(> .voice-teal)::marker {
+    color: #0f766e;
+}
+
+.blog-content li:has(> .voice-maroon)::marker {
+    color: #800000;
+}
+
+.top-finger {
+    font-size: 1.75rem;
+    line-height: 1;
+    text-decoration: none;
+}
+
 .blog-content b,
 .blog-content strong,
 .blog-content h1,

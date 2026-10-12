@@ -64,3 +64,12 @@ Existing project overrides and their intent:
 
 - Do not use Oxford commas in prose.
 - Keep the two versions of the AI article in sync: `content/en/blog/ai-without-the-mystery-dot-points.md` is the bullet-point version and `content/en/blog/ai-without-the-mystery-full-article.md` is the prose version. Whenever the dot-point version changes, update the full-article version to match, keeping its prose style.
+
+### Two voices
+
+The AI article is written as an even, turn-taking exchange between two complementary perspectives rather than a single narrator. Each point (a bullet in the dot-point version, a paragraph in the full-article version) is wrapped in a `<span>` that carries the speaker's colour, so the two voices read as a balanced back-and-forth in roughly equal measure.
+
+- `<span class="voice-teal">` is the analysis-first voice that carries the deeper, higher-value explanation.
+- `<span class="voice-maroon">` is the plain-language voice that keeps the everyday framing accessible.
+
+Both classes are defined in `assets/css/custom.css` (teal `#0f766e`, maroon `#800000`); the `li:has(...)::marker` rules colour the matching bullet markers. When editing either version, keep the two voices close to half and half, give the teal voice the more substantial technical points, and mirror the same colour choices across both files so the versions stay in sync. No speaker names are shown to readers.

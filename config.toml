@@ -13,7 +13,7 @@ title                            = "Simply Learn AI"
     fadeIn                       = true                    # Turn on/off the fade-in effect
     fadeInIndex                  = false                   # Turn on/off the fade-in effect on the index page even if fade-in was otherwise turned off
     dateFormat                   = "Jan 2, 2006"
-    email                        = "hello@example.com"      # E-mail address for contact section
+    email                        = "simply-learn-ai@proton.me"      # E-mail address for contact section
     customCSS                    = ["css/custom.css"]      # Include custom css files placed under assets/
     customJS                     = ["js/lightbox.js"]      # Include custom JavaScript files placed under assets/
 
