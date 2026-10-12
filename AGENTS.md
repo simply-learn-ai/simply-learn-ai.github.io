@@ -67,9 +67,9 @@ Existing project overrides and their intent:
 
 ### Two voices
 
-The AI article is written as an even, turn-taking exchange between two complementary perspectives rather than a single narrator. Each point (a bullet in the dot-point version, a paragraph in the full-article version) is wrapped in a `<span>` that carries the speaker's colour, so the two voices read as a balanced back-and-forth in roughly equal measure.
+The dot-point version of the AI article (`content/en/blog/ai-without-the-mystery-dot-points.md`) is written as an even, turn-taking exchange between two complementary perspectives rather than a single narrator. Each bullet is wrapped in a `<span>` that carries the speaker's colour, so the two voices read as a balanced back-and-forth in roughly equal measure. The prose version (`content/en/blog/ai-without-the-mystery-full-article.md`) is plain text with no colour.
 
 - `<span class="voice-teal">` is the analysis-first voice that carries the deeper, higher-value explanation.
 - `<span class="voice-maroon">` is the plain-language voice that keeps the everyday framing accessible.
 
-Both classes are defined in `assets/css/custom.css` (teal `#0f766e`, maroon `#800000`); the `li:has(...)::marker` rules colour the matching bullet markers. When editing either version, keep the two voices close to half and half, give the teal voice the more substantial technical points, and mirror the same colour choices across both files so the versions stay in sync. No speaker names are shown to readers.
+Both classes are defined in `assets/css/custom.css` (teal `#0f766e`, maroon `#800000`); the `li:has(...)::marker` rules colour the matching bullet markers. When editing the dot-point version, keep the two voices close to half and half and give the teal voice the more substantial technical points. No speaker names are shown to readers.
