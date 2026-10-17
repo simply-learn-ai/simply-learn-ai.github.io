@@ -7,7 +7,7 @@ summary = "A practical guide to how artificial intelligence works, what it can d
 
 +++
 
-## Introduction:
+## Introduction
 
 Artificial intelligence (AI) is the ability of a computer system to perform tasks we usually associate with human thinking: recognising patterns, understanding language, generating text, making predictions and reasoning towards decisions. In daily life, however, most of us meet a narrower kind of AI.
 
