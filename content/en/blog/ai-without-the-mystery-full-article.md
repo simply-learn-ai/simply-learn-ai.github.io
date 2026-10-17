@@ -23,6 +23,29 @@ Many providers charge by the number of tokens that a prompt and its reply use. D
 
 <img src="/img/tokenizer.png" alt="How a chatbot breaks text into tokens" width="700">
 
+## What is a model, in simple words
+
+A **model** is a trained program that has learned patterns from a huge amount of examples, then uses those patterns to answer new questions. A useful analogy is a student who has read an enormous library. Nobody gave them a rulebook for every situation: after reading millions of pages, they noticed patterns, such as how sentences are built, how recipes work and how code is written. When you ask something new, they guess the most likely good answer based on what they have read. The more and better material they learned from, the better the guesses tend to be.
+
+This is worth understanding because it explains both the power and the limits of these tools. A model is not a database of stored facts, it is a pattern-guesser, which is why it can sound confident and still be wrong. The names you will see are the model names: GPT behind ChatGPT, Sonnet and Haiku behind Claude, and Gemini from Google. The tool you type into, such as ChatGPT or the Claude app, is the chat window; the model is the engine inside it.
+
+### Which model to use for which job
+
+The same rule applies throughout this guide: use the free model for everyday questions, and upgrade only when a specific job needs it.
+
+| Use case | Which model or tool | Why |
+|---|---|---|
+| Everyday questions, quick drafts and explanations | Any free chatbot: ChatGPT Free, Claude Free, Gemini Free | Good enough for most tasks and costs nothing |
+| Long documents, reports and file creation | Claude Pro (Sonnet or Opus) | Handles long context and writes well |
+| Coding help, debugging and short scripts | Claude Pro or ChatGPT Plus | Strongest code reasoning |
+| Research with links you can open | Perplexity Free, or Pro for heavier use | Built for cited sources |
+| Images and short videos | Gemini Free, Leonardo.Ai (free credits) or ChatGPT Plus | Native image generation |
+| Voice conversation | Gemini Live or ChatGPT voice mode | Real-time speech |
+| Simple rewrites and translations | Smaller models such as Haiku or Gemini Flash | Faster and cheaper than the largest models |
+| Medicine, law, money or emergencies | Never a model: a qualified person | No model accepts responsibility for the answer |
+
+Two habits are worth building from this table. Match the model to the task rather than the other way round, because a quick rewrite does not need the most expensive model. And remember that no model is the right choice for high-stakes decisions: a model can prepare your questions, but a qualified human gives the final answer.
+
 ## The stages of an AI model: from learning to answering
 
 An AI assistant is not created in one step. A useful way to picture its life is to prepare examples, train a model to find patterns, tune how it responds, and then run it each time someone asks a question.
