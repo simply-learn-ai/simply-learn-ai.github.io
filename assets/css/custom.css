@@ -87,6 +87,9 @@ h6,
     border-radius: 12px;
 }
 
+.learning-corner-heading {
+    transform: translateX(0.5rem);
+}
 
 h1 a,
 h2 a,
