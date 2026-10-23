@@ -9,10 +9,6 @@
                 <img class="latest-articles-image" src="/img/croissant.jpeg" alt="">
             </div>
             <div class="column">
-                <div class="markdown latest-articles-intro">
-                    <p><strong>Learn about AI with confidence.</strong> These practical guides explain how AI works, where it can help and how to use it safely.<strong><a href="{{ .Permalink }}"> Read more</a></strong></p>
-                    <p>Find clear advice on checking answers, protecting your privacy and spotting scams.</p>
-                </div>
                 {{ range first 1 .Pages.ByPublishDate.Reverse }}
                 <div class="summary">
                     <h3 class="title is-3 latest-post-title"><a href="{{ .Permalink }}">{{ .Title | markdownify }}</a></h3>
